@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import ListaPaciente from '@/components/paciente/ListaPaciente'
 import EditarPaciente from '@/components/paciente/EditarPaciente'
+import EliminarPaciente from '@/components/paciente/EliminarPaciente'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/paciente/:PacienteRut/editar',
       name: 'EditarPaciente',
       component: EditarPaciente
+    },
+    {
+      path: '/paciente/:PacienteRut/eliminar',
+      name: 'EliminarPaciente',
+      component: EliminarPaciente
     }
 
   ],

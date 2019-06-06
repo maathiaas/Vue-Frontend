@@ -12,7 +12,7 @@
                                 Editar
                             </b-button>
 
-                            <b-button size="sm" variant="danger"> 
+                            <b-button size="sm" variant="danger" :to="{ name:'EliminarPaciente', params: {PacienteRut: data.item.rut_paciente} }"> 
                                 Eliminar
                             </b-button>
 

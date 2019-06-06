@@ -105,7 +105,9 @@
 </template>
 
 <script>
-import axios from 'axios';
+
+import axios from 'axios'
+import swal from 'sweetalert'
 export default {
     data(){
         return {
@@ -127,7 +129,7 @@ export default {
         onSubmit(evt){
             evt.preventDefault()
             const path = `http://127.0.0.1:8000/api/paciente/${this.PacienteRut}/`
-
+            // Actualiza los campos
             axios.patch(path, this.form).then((Response) => {
 
                 this.form.nombres = Response.data.nombres
@@ -140,7 +142,7 @@ export default {
                 this.form.telefono = Response.data.telefono
                 this.form.prevision = Response.data.prevision
 
-                alert("El paciente fue actualizado exitosamente!")
+                swal("El paciente fue actualizado exitosamente!", "","success")
 
             })
             .catch((error) => {
@@ -149,6 +151,7 @@ export default {
         },
         getPaciente(){
             const path = `http://127.0.0.1:8000/api/paciente/${this.PacienteRut}/`
+            //trae los datos de la api y los coloca 
             axios.get(path).then((Response) => {
                 this.form.nombres = Response.data.nombres
                 this.form.apellido_pat = Response.data.apellido_pat
