@@ -6,6 +6,10 @@
                 <div class="">
                     <h2>Listado de pacientes</h2>
 
+                    <b-button size="sm" variant="primary" :to="{ name:'Index'}"> 
+                        Home
+                    </b-button>
+
                     <b-button size="sm" variant="primary" :to="{ name:'NuevoPaciente'}"> 
                         Ingresar Paciente
                     </b-button>
