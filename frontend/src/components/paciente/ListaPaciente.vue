@@ -6,6 +6,18 @@
                 <div class="col-md-12">
                     <b-table striped hover :items="paciente" :fields="fields">
 
+                        <template slot="action" slot-scope="data">
+
+                            <b-button size="sm" variant="primary" :to="{ name:'EditarPaciente', params: {PacienteRut: data.item.rut_paciente} }"> 
+                                Editar
+                            </b-button>
+
+                            <b-button size="sm" variant="danger"> 
+                                Eliminar
+                            </b-button>
+
+                        </template>
+
                     </b-table>
 
 
@@ -34,7 +46,7 @@ export default {
                 { key: 'direccion', label: 'Direccion'},
                 { key: 'telefono', label: 'Telefono'},
                 { key: 'prevision', label: 'Previsión'},
-                { key: 'action', label: 'Acción'}
+                { key: 'action', label: 'Opciones'}
 
             ],
             paciente : []
