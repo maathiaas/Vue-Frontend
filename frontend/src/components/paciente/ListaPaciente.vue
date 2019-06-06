@@ -2,7 +2,18 @@
     <div class="container">
         <div class="row">
             <div class="col text-left">
-                <h2>Listado de pacientes</h2>
+                
+                <div class="">
+                    <h2>Listado de pacientes</h2>
+
+                    <b-button size="sm" variant="primary" :to="{ name:'NuevoPaciente'}"> 
+                        Ingresar Paciente
+                    </b-button>
+
+                </div>
+                
+                <br>
+
                 <div class="col-md-12">
                     <b-table striped hover :items="paciente" :fields="fields">
 
