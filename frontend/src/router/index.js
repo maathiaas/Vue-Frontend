@@ -5,6 +5,8 @@ import ListaPaciente from '@/components/paciente/ListaPaciente'
 import EditarPaciente from '@/components/paciente/EditarPaciente'
 import EliminarPaciente from '@/components/paciente/EliminarPaciente'
 import NuevoPaciente from '@/components/paciente/NuevoPaciente'
+import ListaAgendarExamen from '@/components/agendar/ListaAgendarExamen'
+import AgendarExamen from '@/components/agendar/AgendarExamen'
 
 Vue.use(Router)
 
@@ -34,6 +36,16 @@ export default new Router({
       path: '/paciente/ingresar',
       name: 'NuevoPaciente',
       component: NuevoPaciente
+    },
+    {
+      path: '/agendar',
+      name: 'ListaAgendarExamen',
+      component: ListaAgendarExamen
+    },
+    {
+      path: '/agendar/agendar',
+      name: 'AgendarExamen',
+      component: AgendarExamen
     }
 
   ],
