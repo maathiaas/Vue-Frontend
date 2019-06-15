@@ -89,7 +89,7 @@ export default {
     methods: {
         onSubmit(evt){
             evt.preventDefault()
-            const path = 'http://127.0.0.1:8000/api/AgendarExamen/'
+            const path = 'http://127.0.0.1:8000/api/agendarexamen/'
             // ingresa los campos
             axios.post(path, this.form).then((Response) => {
                 this.form.descripcion = Response.data.descripcion

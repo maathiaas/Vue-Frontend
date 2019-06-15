@@ -58,7 +58,7 @@ export default {
     },
     methods: {
         getAgendarExamen () {
-            const path = 'http://127.0.0.1:8000/api/AgendarExamen/'
+            const path = 'http://127.0.0.1:8000/api/agendarexamen/'
             axios.get(path).then((Response) => {
                 this.AgendarExamen = Response.data
             })
