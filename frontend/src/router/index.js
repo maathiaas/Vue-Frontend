@@ -8,6 +8,8 @@ import NuevoPaciente from '@/components/paciente/NuevoPaciente'
 import ListaAgendarExamen from '@/components/agendar/ListaAgendarExamen'
 import AgendarExamen from '@/components/agendar/AgendarExamen'
 import VerTiposExamen from '@/components/tipoExamen/VerTiposExamen'
+import ListaExamen from '@/components/examen/ListaExamen'
+import DetalleExamenes from '@/components/examen/DetalleExamenes'
 
 Vue.use(Router)
 
@@ -44,7 +46,7 @@ export default new Router({
       component: ListaAgendarExamen
     },
     {
-      path: '/agendar/agendar',
+      path: '/agendar/AgendarExamen',
       name: 'AgendarExamen',
       component: AgendarExamen
     },
@@ -52,6 +54,16 @@ export default new Router({
       path: '/tipoExamen',
       name: 'VerTiposExamen',
       component: VerTiposExamen
+    },
+    {
+      path: '/examen',
+      name: 'ListaExamen',
+      component: ListaExamen
+    },
+    {
+      path: '/examen/DetalleExamenes',
+      name: 'DetalleExamenes',
+      component: DetalleExamenes
     }
 
   ],
