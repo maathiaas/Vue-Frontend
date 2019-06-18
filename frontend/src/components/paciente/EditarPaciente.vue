@@ -128,7 +128,7 @@ export default {
     methods: {
         onSubmit(evt){
             evt.preventDefault()
-            const path = `http://127.0.0.1:8000/api/paciente/${this.PacienteRut}/`
+            const path = `http://backendapi.pythonanywhere.com/api/paciente/${this.PacienteRut}/`
             // Actualiza los campos
             axios.patch(path, this.form).then((Response) => {
 
@@ -150,7 +150,7 @@ export default {
             })
         },
         getPaciente(){
-            const path = `http://127.0.0.1:8000/api/paciente/${this.PacienteRut}/`
+            const path = `http://backendapi.pythonanywhere.com/api/paciente/${this.PacienteRut}/`
             //trae los datos de la api y los coloca 
             axios.get(path).then((Response) => {
                 this.form.nombres = Response.data.nombres

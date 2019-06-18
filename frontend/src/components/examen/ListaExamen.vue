@@ -54,7 +54,7 @@ export default {
     },
     methods: {
         getExamen () {
-            const path = 'http://127.0.0.1:8000/api/examen/'
+            const path = 'http://backendapi.pythonanywhere.com/api/examen/'
             axios.get(path).then((Response) => {
                 this.Examen = Response.data
             })

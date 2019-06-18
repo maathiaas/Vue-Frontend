@@ -58,7 +58,7 @@ export default {
     },
     methods: {
         getPaciente(){
-            const path = `http://127.0.0.1:8000/api/paciente/${this.PacienteRut}/`
+            const path = `http://backendapi.pythonanywhere.com/api/paciente/${this.PacienteRut}/`
             //trae los datos de la api y los coloca 
             axios.get(path).then((Response) => {
                 this.element.nombres = Response.data.nombres
@@ -77,7 +77,7 @@ export default {
             })
         },
         EliminarPaciente () {
-            const path = `http://127.0.0.1:8000/api/paciente/${this.PacienteRut}/`
+            const path = `http://backendapi.pythonanywhere.com/api/paciente/${this.PacienteRut}/`
 
             axios.delete(path).then((Response) => {
                 

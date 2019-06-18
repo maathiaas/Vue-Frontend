@@ -135,7 +135,7 @@ export default {
     methods: {
         onSubmit(evt){
             evt.preventDefault()
-            const path = 'http://127.0.0.1:8000/api/paciente/'
+            const path = 'http://backendapi.pythonanywhere.com/api/paciente/'
             // ingresa los campos
             axios.post(path, this.form).then((Response) => {
                 this.form.rut_paciente = Response.data.rut_paciente

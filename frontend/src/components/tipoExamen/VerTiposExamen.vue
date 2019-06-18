@@ -49,7 +49,7 @@ export default {
     },
     methods: {
         getTipoExamen () {
-            const path = 'http://127.0.0.1:8000/api/tipoexamen/'
+            const path = 'http://backendapi.pythonanywhere.com/api/tipoexamen/'
             axios.get(path).then((Response) => {
                 this.tipoExamen = Response.data
             })
