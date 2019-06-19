@@ -47,14 +47,14 @@ export default {
                 { key: 'paciente', label: 'Paciente'},
                 { key: 'tipo_examen', label: 'Tipo de Examen'},
                 { key: 'espacialista', label: 'Especialista'},
-                { key: 'action' }
+                { key: 'action', label: 'Opciones' }
             ],
             Examen : []
         }
     },
     methods: {
         getExamen () {
-            const path = 'http://backendapi.pythonanywhere.com/api/examen/'
+            const path = 'https://backendapi.pythonanywhere.com/api/examen/'
             axios.get(path).then((Response) => {
                 this.Examen = Response.data
             })

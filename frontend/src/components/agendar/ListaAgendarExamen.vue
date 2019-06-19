@@ -20,15 +20,6 @@
 
                 <div class="col-md-12">
                     <b-table striped hover :items="AgendarExamen" :fields="fields">
-
-                        <template slot="action" slot-scope=""> 
-                            
-                            <b-button size="sm" variant="primary"> 
-                                Detalles
-                            </b-button>
-
-                        </template>
-
                     </b-table>
 
 
@@ -50,15 +41,14 @@ export default {
                 { key: 'descripcion', label: 'Descripción'},
                 { key: 'hora', label: 'Hora'},
                 { key: 'dia', label: 'Dia'},
-                { key: 'usuario', label: 'Rut del Paciente'},
-                { key: 'action', label: 'Opciones'}
+                { key: 'usuario', label: 'Rut del Paciente'}
             ],
             AgendarExamen : []
         }
     },
     methods: {
         getAgendarExamen () {
-            const path = 'http://backendapi.pythonanywhere.com/api/agendarexamen/'
+            const path = 'https://backendapi.pythonanywhere.com/api/agendarexamen/'
             axios.get(path).then((Response) => {
                 this.AgendarExamen = Response.data
             })
@@ -70,6 +60,5 @@ export default {
     created(){
         this.getAgendarExamen()
     }
-
 }
 </script>

@@ -89,7 +89,7 @@ export default {
     methods: {
         onSubmit(evt){
             evt.preventDefault()
-            const path = 'http://backendapi.pythonanywhere.com/api/agendarexamen/'
+            const path = 'https://backendapi.pythonanywhere.com/api/agendarexamen/'
             // ingresa los campos
             axios.post(path, this.form).then((Response) => {
                 this.form.descripcion = Response.data.descripcion

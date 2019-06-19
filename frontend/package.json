@@ -5,7 +5,7 @@
   "author": "matias <matiasgallardo.do2@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --history-api-fallback --progress --config build/webpack.dev.conf.js",
     "start": "node server.js",
     "build": "node build/build.js"
   },

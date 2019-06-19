@@ -9,7 +9,7 @@
                     <b-button size="sm" variant="primary" :to="{ name:'Index'}"> 
                         Home
                     </b-button>
-                    <b-button size="sm" variant="primary" :to="{ name:'ListaExamen'}"> 
+                    <b-button size="sm" variant="success" :to="{ name:'ListaExamen'}"> 
                         Volver
                     </b-button>
                 </div>
@@ -51,7 +51,7 @@ export default {
     },
     methods: {
         getDetalleExamen () {
-            const path = 'http://backendapi.pythonanywhere.com/api/examen/'
+            const path = 'https://backendapi.pythonanywhere.com/api/examen/'
             axios.get(path).then((Response) => {
                 this.DetalleExamen = Response.data
             })

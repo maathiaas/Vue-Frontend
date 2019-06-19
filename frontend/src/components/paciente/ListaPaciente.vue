@@ -69,7 +69,7 @@ export default {
     },
     methods: {
         getPaciente () {
-            const path = 'http://backendapi.pythonanywhere.com/api/paciente/'
+            const path = 'https://backendapi.pythonanywhere.com/api/paciente/'
             axios.get(path).then((Response) => {
                 this.paciente = Response.data
             })

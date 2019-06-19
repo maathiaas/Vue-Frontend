@@ -12,9 +12,7 @@
                 <p>Dirección: {{this.element.direccion}}</p>
                 <p>Telefono: {{this.element.telefono}}</p>
                 <p>Previsión: {{this.element.prevision}}</p>
-
             </div>
-
         </div>
 
         <div class="row">
@@ -25,13 +23,10 @@
                 <b-button type="submit" class="btn-large-space" :to="{ name:'ListaPaciente'}">
                     Cancelar
                 </b-button>
-
             </div>
-
         </div>
-
     </div>
-    
+
 </template>
 
 <script>
@@ -58,8 +53,7 @@ export default {
     },
     methods: {
         getPaciente(){
-            const path = `http://backendapi.pythonanywhere.com/api/paciente/${this.PacienteRut}/`
-            //trae los datos de la api y los coloca 
+            const path = `https://backendapi.pythonanywhere.com/api/paciente/${this.PacienteRut}/`
             axios.get(path).then((Response) => {
                 this.element.nombres = Response.data.nombres
                 this.element.apellido_pat = Response.data.apellido_pat
@@ -77,7 +71,7 @@ export default {
             })
         },
         EliminarPaciente () {
-            const path = `http://backendapi.pythonanywhere.com/api/paciente/${this.PacienteRut}/`
+            const path = `https://backendapi.pythonanywhere.com/api/paciente/${this.PacienteRut}/`
 
             axios.delete(path).then((Response) => {
                 

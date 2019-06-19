@@ -9,11 +9,6 @@
                     <b-button size="sm" variant="primary" :to="{ name:'Index'}"> 
                         Home
                     </b-button>
-
-                    <b-button size="sm" variant="primary" :to="{ name:'NuevoPaciente'}"> 
-                        Ingresar Nuevo Tipo de Examen
-                    </b-button>
-
                 </div>
                 
                 <br>
@@ -49,7 +44,7 @@ export default {
     },
     methods: {
         getTipoExamen () {
-            const path = 'http://backendapi.pythonanywhere.com/api/tipoexamen/'
+            const path = 'https://backendapi.pythonanywhere.com/api/tipoexamen/'
             axios.get(path).then((Response) => {
                 this.tipoExamen = Response.data
             })
